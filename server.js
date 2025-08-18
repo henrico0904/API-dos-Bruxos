@@ -1,5 +1,5 @@
 import express from "express";
-import bruxos from "./src/data/bruxos";
+import bruxos from "./src/data/bruxos.js";
 
 const app = express();
 const portServer = 3000;
