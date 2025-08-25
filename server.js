@@ -98,7 +98,7 @@ app.get("/animais", (req, res) => {
 app.get("/animais/:id", (req, res) => {
     const id = parseInt(req.params.id);
 
-    const animal = animal.find(a => a.id === id);
+    const animal = animais.find(a => a.id === id);
 
     if(animal){
         res.status(200).json(animal)
