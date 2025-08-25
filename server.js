@@ -45,7 +45,7 @@ app.get("/varinhas", (req, res) => {
 
 
 app.get("/animais", (req, res) => {
-    if(animais.lenght > 0){
+    if(animais.length > 0){
         res.status(200).json(animais)
     } else {
         res.status(404).json({
@@ -56,7 +56,7 @@ app.get("/animais", (req, res) => {
 
 
 app.get("/pocoes", (req, res) => {
-    if(pocoes,length > 0){
+    if(pocoes.length > 0){
         res.status(200).json(pocoes)
     } else {
         res.status(404).json({
