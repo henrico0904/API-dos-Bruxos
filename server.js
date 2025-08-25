@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     res.send("Minha API do Potter está ativa")
 });
 
-app.get("/bruxos", (req, res) =>{
+app.get("/bruxos/:id", (req, res) =>{
     if(bruxos.length > 0){
         res.status(200).json(bruxos);
     } else{
@@ -22,7 +22,7 @@ app.get("/bruxos", (req, res) =>{
 });
 
 
-app.get("/casas", (req, res) => {
+app.get("/casas/:id", (req, res) => {
     if(casas.length > 0){
         res.status(200).json(casas)
     } else{
@@ -32,7 +32,7 @@ app.get("/casas", (req, res) => {
     }
 });
 
-app.get("/varinhas", (req, res) => {
+app.get("/varinhas/:id", (req, res) => {
     if(varinhas.length > 0){
         res.status(200).json(varinhas)
     } else{
@@ -44,7 +44,7 @@ app.get("/varinhas", (req, res) => {
 
 
 
-app.get("/animais", (req, res) => {
+app.get("/animais/:id", (req, res) => {
     if(animais.length > 0){
         res.status(200).json(animais)
     } else {
