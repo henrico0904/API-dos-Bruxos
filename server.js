@@ -33,6 +33,7 @@ app.get("/casas/:id", (req, res) => {
 });
 
 app.get("/varinhas/:id", (req, res) => {
+    
     if(varinhas.length > 0){
         res.status(200).json(varinhas)
     } else{
