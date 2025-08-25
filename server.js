@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
     res.send("Minha API do Potter está ativa")
 });
 
-app.get("/bruxos/:id", (req, res) =>{
+app.get("/bruxos", (req, res) =>{
     if(bruxos.length > 0){
         res.status(200).json(bruxos);
     } else{
@@ -20,9 +20,23 @@ app.get("/bruxos/:id", (req, res) =>{
         })
     }
 });
+app.get("/bruxos/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+
+    const bruxo = bruxos.find(b => b.id === id);
+
+    if(bruxo){
+        res.status(200).json(bruxo)
+    } else{
+        res.status(404).json({
+            mensagem: "Nenhum Bruxo encontrado"
+        })
+    }
+});
 
 
-app.get("/casas/:id", (req, res) => {
+
+app.get("/casas", (req, res) => {
     if(casas.length > 0){
         res.status(200).json(casas)
     } else{
@@ -31,9 +45,23 @@ app.get("/casas/:id", (req, res) => {
         })
     }
 });
+app.get("/casas/:id", (req, res) => {
+    const id = parseInt(req.params.id);
 
-app.get("/varinhas/:id", (req, res) => {
-    
+    const casa = casas.find(c => c.id === id);
+
+    if(casa){
+        res.status(200).json(casa)
+    } else{
+        res.status(404).json({
+            mensagem: "Nenhuma Casa encontrada"
+        })
+    }
+});
+
+
+
+app.get("/varinhas", (req, res) => {
     if(varinhas.length > 0){
         res.status(200).json(varinhas)
     } else{
@@ -42,10 +70,23 @@ app.get("/varinhas/:id", (req, res) => {
         })
     }
 });
+app.get("/varinhas/:id", (req, res) => {
+        const id = parseInt(req.params.id);
+    
+        const varinha = varinhas.find(v => v.id === id);
+    
+        if(varinha){
+            res.status(200).json(varinha)
+        } else{
+            res.status(404).json({
+                mensagem: "Nenhuma Varinha encontrada"
+            })
+        }
+    });
+    
 
 
-
-app.get("/animais/:id", (req, res) => {
+app.get("/animais", (req, res) => {
     if(animais.length > 0){
         res.status(200).json(animais)
     } else {
@@ -54,6 +95,20 @@ app.get("/animais/:id", (req, res) => {
         })
     }
 });
+app.get("/animais/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+
+    const animal = animal.find(a => a.id === id);
+
+    if(animal){
+        res.status(200).json(animal)
+    } else{
+        res.status(404).json({
+            mensagem: "Nenhuma Animal encontrado"
+        })
+    }
+});
+
 
 
 app.get("/pocoes", (req, res) => {
@@ -65,10 +120,19 @@ app.get("/pocoes", (req, res) => {
         })
     }
 });
+app.get("/pocoes/:id", (req, res) => {
+    const id = parseInt(req.params.id);
 
+    const pocao = pocoes.find(p => p.id === id);
 
-
-
+    if(pocao){
+        res.status(200).json(pocao)
+    } else{
+        res.status(404).json({
+            mensagem: "Nenhuma Varinha encontrada"
+        })
+    }
+});
 
 
 app.listen(3000, () => {
