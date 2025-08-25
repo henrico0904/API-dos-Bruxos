@@ -51,16 +51,19 @@
             especialidade: "Ver criaturas imaginárias (ou não) 👻",
         },
        {
-     id:6,
-     nome:"Neville Longbottom",
-     casa:"Grifinória",
-     ano: 7,
-     varinha: "Cerejeira e pelo de unicórnio, 30cm",
-     mascote: "Sapo (Trevor)",
-     patrono: "Não conhecido",
-     especialidade: "Herbologia avançada"
+        
+        id:6,
+        nome:"Neville Longbottom",
+        casa:"Grifinória",
+        ano: 7,
+        varinha: "Cerejeira e pelo de unicórnio, 30cm",
+        mascote: "Sapo (Trevor)",
+        patrono: "Não conhecido",
+        especialidade: "Herbologia avançada"
        },
-       {id: 7,
+       {
+        
+        id: 7,
         nome:"Cho Chang",
         casa: "Corvinal",
         ano: 7,
